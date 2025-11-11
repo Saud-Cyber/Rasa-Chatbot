@@ -23,7 +23,7 @@ Getting Started
 Clone the repository:
 
 text
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Saud-Cyber/Rasa-Chatbot
 cd your-repo-name
 Review and update configuration files as needed:
 
