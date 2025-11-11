@@ -1,0 +1,74 @@
+version: "3.1"
+
+intents:
+  - greet
+  - ask_career_guidance
+  - provide_info
+  - ask_career_detail
+  - goodbye
+
+entities:
+  - skill
+  - interest
+  - education
+  - career
+
+slots:
+  skill:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: skill
+
+  interest:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: interest
+
+  education:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: education
+
+  career:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: career
+      - type: from_text
+
+forms:
+  career_form:
+    required_slots:
+      - skill
+      - interest
+      - education
+
+responses:
+  utter_greet:
+    - text: "Hello! I'm your career guidance assistant. How can I help you today?"
+
+  utter_ask_skill:
+    - text: "What are your key skills?"
+
+  utter_ask_interest:
+    - text: "What are your interests?"
+
+  utter_ask_education:
+    - text: "What is your educational background?"
+
+  utter_ask_career_detail:
+    - text: "Tell me which career you want details about—Cybersecurity, Data Science, Business, or Marketing?"
+
+  utter_goodbye:
+    - text: "Good luck with your career! Goodbye."
+
+actions:
+  - action_submit_career_form
+  - action_career_details

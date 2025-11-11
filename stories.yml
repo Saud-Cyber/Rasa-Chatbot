@@ -1,0 +1,27 @@
+version: "3.1"
+stories:
+
+- story: full guidance flow
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_career_guidance
+  - action: career_form
+  - active_loop: career_form
+  - slot_was_set:
+    - skill: programming
+    - interest: cybersecurity
+    - education: computer science
+  - active_loop: null
+  - action: action_submit_career_form
+  - action: action_listen
+  - intent: ask_career_detail
+    entities:
+      - career: Cybersecurity
+  - action: action_career_details
+  - action: action_listen
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye

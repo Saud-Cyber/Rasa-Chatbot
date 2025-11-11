@@ -1,0 +1,47 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good evening
+
+- intent: ask_career_guidance
+  examples: |
+    - I need career advice
+    - Suggest a career path
+    - Which career suits me?
+    - Help me decide a career
+    - Can you guide me for my career options?
+
+- intent: provide_info
+  examples: |
+    - My skills are [programming](skill)
+    - [programming](skill)
+    - I am interested in [cybersecurity](interest)
+    - [cybersecurity](interest)
+    - My education is [computer science](education)
+    - [computer science](education)
+    - My skills are [marketing](skill)
+    - I am interested in [business](interest)
+    - My education is [management](education)
+    - [business](interest)
+    - [marketing](skill)
+    - [management](education)
+
+- intent: ask_career_detail
+  examples: |
+    - Tell me about [Cybersecurity](career)
+    - What is the salary for [Data Science](career)?
+    - Which certification for [Business](career)?
+    - Courses for [Marketing](career)?
+    - I want details on [Cybersecurity](career)
+    - Explain [Data Science](career) career option
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
